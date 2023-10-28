@@ -1,1 +1,1 @@
-where my helen parr fans at [incredibles.mom]
+where my helen parr fans at [incredibles.mom](incredibles.mom)
