@@ -1,7 +1,7 @@
 import React from "react";
 
 function VideoComponent() {
-  const videoUrl = "https://www.youtube.com/embed/lg5WKsVnEA4?si=SYCMJ4ObIjNK0mCY";
+  const videoUrl = "https://www.youtube.com/embed/3WAOxKOmR90?si=CwLLMeO3b1H93UO_";
 
   return (
     <div className="video-component" style={{ margin: "20px" }}>
