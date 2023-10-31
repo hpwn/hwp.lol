@@ -1,13 +1,11 @@
-import React from "react";
-import VideoComponent from "./VideoComponent";
-import SubscriptionComponent from "./SubscriptionComponent";
-import "./App.css";
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <VideoComponent />
-      <SubscriptionComponent />
+      <header className="App-header">
+        <p>serf king</p>
+      </header>
     </div>
   );
 }
