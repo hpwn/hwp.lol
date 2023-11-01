@@ -2,42 +2,45 @@
 interface ServiceProps {
   title: string;
   description: string;
-  examples: string;
-  competitors: string;
+  links: string;  
   checkoutLink: string;
   photoSrc: string;
+  showExamplesLabel?: boolean;  // New prop for conditional rendering
 }
 
 const Service = ({
   title,
   description,
-  examples,
-  competitors,
+  links,  
   checkoutLink,
-  photoSrc
+  photoSrc,
+  showExamplesLabel = true  // Default to true
 }: ServiceProps) => {
-  // Convert comma-separated strings to arrays
-  const examplesArray = examples.split(', ');
-  const competitorsArray = competitors.split(', ');
-
   return (
       <div style={serviceStyle}>
           <img src={photoSrc} alt={`${title} illustration`} style={photoStyle} />
           <div style={textContainerStyle}>
               <h2 style={titleStyle}>{title}</h2>
               <p style={descriptionStyle}>{description}</p>
-              <div style={linkContainerStyle}>
-                  {examplesArray.map((example, index) => (
-                      <a key={index} href="#" style={linkStyle}>{example}</a>
-                  ))}
-                  {competitorsArray.map((competitor, index) => (
-                      <a key={index + examplesArray.length} href="#" style={linkStyle}>{competitor}</a>
-                  ))}
-              </div>
-              <a href={checkoutLink} style={checkoutLinkStyle}>Purchase</a>
+              {links && (
+                  <div style={linkContainerStyle}>
+                      {showExamplesLabel ? <><div style={examplesLabelStyle}>examples</div><br /></> : ''}  {/* Include break element */}
+                      <span dangerouslySetInnerHTML={{ __html: links }} />
+                  </div>
+              )}
+              <a href={checkoutLink} style={subscribeLinkStyle}>Subscribe</a>  {/* Updated text and style */}
           </div>
       </div>
   );
+};
+
+const examplesLabelStyle: React.CSSProperties = {
+  color: '#555',  // Darker grey color
+};
+
+const subscribeLinkStyle: React.CSSProperties = {
+  color: '#ffc66e',  // Lighter blue color
+  textDecoration: 'none',
 };
 
 const serviceStyle: React.CSSProperties = {
@@ -70,21 +73,10 @@ const descriptionStyle: React.CSSProperties = {
   margin: '0 0 16px 0',
 };
 
-const checkoutLinkStyle: React.CSSProperties = {
-  color: 'blue',
-  textDecoration: 'underline',
-};
-
 const linkContainerStyle: React.CSSProperties = {
   margin: '8px 0',
   display: 'flex',
-  flexWrap: 'wrap',
-};
-
-const linkStyle: React.CSSProperties = {
-  color: '#61dafb',  // Adjust the color to match your design
-  textDecoration: 'none',
-  marginRight: '8px',  // Adds some spacing between links
+  flexDirection: "column",
 };
 
 export default Service;
