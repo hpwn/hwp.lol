@@ -1,15 +1,10 @@
-import React from 'react';
-import './App.css';
+// src/App.tsx
+import MainPage from './components/MainPage';
+import './index.css';  // Ensure index.css is imported
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          hwp.lol
-        </p>
-      </header>
-    </div>
+      <MainPage />
   );
 }
 
