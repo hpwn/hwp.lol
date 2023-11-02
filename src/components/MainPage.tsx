@@ -9,7 +9,7 @@ const MainPage = () => {
             <Header />
             {/* Slogan Section */}
             <section style={sloganStyle}>
-                serfdom 🙅🏻‍♂️ kingdom 🤌🏼👑 here are your keys:
+                serfdom 🙅🏻‍♂️ kingdom 🤌🏼👑 here are your keys 🔑
             </section>
             {/* Services Section */}
             <div style={servicesContainerStyle}>
@@ -29,7 +29,7 @@ const MainPage = () => {
                             <a href="https://www.haydenprice.com/" style="color: #61dafb; text-decoration: none;">my personal site</a>,
                             <a href="https://github.com/education/codespaces-project-template-js/blob/main/__images__/js-portfolio-site.gif" style="color: #61dafb; text-decoration: none;">portfolio example</a>,
                             <a href="https://github.com/hpwn/hpwn/blob/main/Resume.pdf" style="color: #61dafb; text-decoration: none;">my resume</a>, 
-                            <a href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs" style="color: #61dafb; text-decoration: none;">resume 2</a>, 
+                            <a href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs" style="color: #61dafb; text-decoration: none;">resume inspiration</a>, 
                             <a href="https://www.wix.com" style="color: #61dafb; text-decoration: none;">Wix</a>, 
                             <a href="https://www.squarespace.com" style="color: #61dafb; text-decoration: none;">Squarespace</a>'
                     checkoutLink="https://stripe.com/checkout2" 
@@ -37,8 +37,11 @@ const MainPage = () => {
                 />
                 <Service 
                     title="Graphics & Editing" 
-                    description="Individually crafted assets and editing to scale." 
-                    links='<a href="https://skylum.com/luminar-ai" style="color: #61dafb; text-decoration: none;">Luminar AI</a>, <a href="https://runwayml.com" style="color: #61dafb; text-decoration: none;">Runway ML</a>'
+                    description="Individually crafted assets + image & video editing to scale." 
+                    links='<a href="https://www.artbreeder.com/" style="color: #61dafb; text-decoration: none;">Artbreeder</a>, <a href="https://runwayml.com" style="color: #61dafb; text-decoration: none;">Runway ML</a>,
+                            <a href="https://skylum.com/luminar-ai" style="color: #61dafb; text-decoration: none;">Luminar AI</a>,
+                            <a href="https://www.midjourney.com/home" style="color: #61dafb; text-decoration: none;">Midjourney</a>,
+                            <a href="https://openai.com/dall-e-3" style="color: #61dafb; text-decoration: none;">Dall-E</a>'
                     checkoutLink="https://stripe.com/checkout3" 
                     photoSrc="/images/service3.png"
                 />
