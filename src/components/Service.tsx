@@ -3,18 +3,18 @@ interface ServiceProps {
   title: string;
   description: string;
   links: string;  
-  checkoutLink: string;
+  checkoutLinks: { url: string; text: string }[];  // Updated type to an array of objects
   photoSrc: string;
-  showExamplesLabel?: boolean;  // New prop for conditional rendering
+  showExamplesLabel?: boolean;
 }
 
 const Service = ({
   title,
   description,
   links,  
-  checkoutLink,
+  checkoutLinks,
   photoSrc,
-  showExamplesLabel = true  // Default to true
+  showExamplesLabel = true
 }: ServiceProps) => {
   return (
       <div style={serviceStyle}>
@@ -24,14 +24,32 @@ const Service = ({
               <p style={descriptionStyle}>{description}</p>
               {links && (
                   <div style={linkContainerStyle}>
-                      {showExamplesLabel ? <><div style={examplesLabelStyle}>examples</div><br /></> : ''}  {/* Include break element */}
+                      {showExamplesLabel ? <><div style={examplesLabelStyle}>examples</div><br /></> : null}
                       <span dangerouslySetInnerHTML={{ __html: links }} />
                   </div>
               )}
-              <a href={checkoutLink} style={subscribeLinkStyle}>Subscribe</a>  {/* Updated text and style */}
+              <div style={checkoutLinksContainerStyle}>
+                ✨
+                {checkoutLinks.map((link, index) => (
+                  <span key={index}>
+                    <a href={link.url} style={checkoutLinkStyle}>{link.text}</a>
+                    {index < checkoutLinks.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
+              </div>
           </div>
       </div>
   );
+};
+
+const checkoutLinksContainerStyle: React.CSSProperties = {
+  marginTop: '10px',  // Add some space above the checkout links
+};
+
+const checkoutLinkStyle: React.CSSProperties = {
+  color: '#ffc66e',  // Lighter blue color
+  textDecoration: 'none',
+  //marginRight: '5px',  // Optional: add a small margin to the right of each link if needed
 };
 
 const examplesLabelStyle: React.CSSProperties = {
