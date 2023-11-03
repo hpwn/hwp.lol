@@ -2,7 +2,7 @@
 interface ServiceProps {
   title: string;
   description: string;
-  links: string;  
+  links: string;
   checkoutLinks: { url: string; text: string }[];  // Updated type to an array of objects
   photoSrc: string;
   showExamplesLabel?: boolean;
@@ -11,34 +11,34 @@ interface ServiceProps {
 const Service = ({
   title,
   description,
-  links,  
+  links,
   checkoutLinks,
   photoSrc,
   showExamplesLabel = true
 }: ServiceProps) => {
   return (
-      <div style={serviceStyle}>
-          <img src={photoSrc} alt={`${title} illustration`} style={photoStyle} />
-          <div style={textContainerStyle}>
-              <h2 style={titleStyle}>{title}</h2>
-              <p style={descriptionStyle}>{description}</p>
-              {links && (
-                  <div style={linkContainerStyle}>
-                      {showExamplesLabel ? <><div style={examplesLabelStyle}>examples</div><br /></> : null}
-                      <span dangerouslySetInnerHTML={{ __html: links }} />
-                  </div>
-              )}
-              <div style={checkoutLinksContainerStyle}>
-                ✨
-                {checkoutLinks.map((link, index) => (
-                  <span key={index}>
-                    <a href={link.url} style={checkoutLinkStyle}>{link.text}</a>
-                    {index < checkoutLinks.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </div>
+    <div style={serviceStyle}>
+      <img src={photoSrc} alt={`${title} illustration`} style={photoStyle} />
+      <div style={textContainerStyle}>
+        <h2 style={titleStyle}>{title}</h2>
+        <p style={descriptionStyle}>{description}</p>
+        {links && (
+          <div style={linkContainerStyle}>
+            {showExamplesLabel ? <><div style={examplesLabelStyle}>examples</div><br /></> : null}
+            <span dangerouslySetInnerHTML={{ __html: links }} />
           </div>
+        )}
+        <div style={checkoutLinksContainerStyle}>
+          ✨
+          {checkoutLinks.map((link, index) => (
+            <span key={index}>
+              <a href={link.url} style={checkoutLinkStyle}>{link.text}</a>
+              {index < checkoutLinks.length - 1 ? ', ' : ''}
+            </span>
+          ))}
+        </div>
       </div>
+    </div>
   );
 };
 
@@ -54,11 +54,6 @@ const checkoutLinkStyle: React.CSSProperties = {
 
 const examplesLabelStyle: React.CSSProperties = {
   color: '#555',  // Darker grey color
-};
-
-const subscribeLinkStyle: React.CSSProperties = {
-  color: '#ffc66e',  // Lighter blue color
-  textDecoration: 'none',
 };
 
 const serviceStyle: React.CSSProperties = {
