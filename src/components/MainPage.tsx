@@ -14,43 +14,49 @@ const MainPage = () => {
             {/* Services Section */}
             <div style={servicesContainerStyle}>
                 <Service
-                    title="AI Generated Profile Pictures"
-                    description="Custom models and full setting controls vastly outperform the trending apps."
-                    links=' <a href="https://www.shruggingface.com/blog/self-portraits-with-stable-diffusion-and-lora" style="color: #61dafb; text-decoration: none;">how?</a>, 
-                            <a href="https://www.kix.in/2023/04/07/sd-lora-finetuning/" style="color: #61dafb; text-decoration: none;">come again?</a>,
-                            <a href="https://www.profilepicture.ai/" style="color: #61dafb; text-decoration: none;">profilepicture.ai</a>'
-                    checkoutLinks={[{ url: "https://buy.stripe.com/5kAbKngvgaM56o88wA", text: "Subscribe" }]}
-                    photoSrc="/images/service1.png"
-                />
-                <Service
-                    title="Branding"
+                    title="Websites"
                     description="Custom modular sites, portfolios, and resumes market you and your projects perfectly."
                     links=' <a href="https://hwp.lol" style="color: #61dafb; text-decoration: none;">this site</a>,
                             <a href="https://www.haydenprice.com/" style="color: #61dafb; text-decoration: none;">my personal site</a>,
-                            <a href="https://github.com/education/codespaces-project-template-js/blob/main/__images__/js-portfolio-site.gif" style="color: #61dafb; text-decoration: none;">portfolio example</a>,
-                            <a href="https://github.com/hpwn/hpwn/blob/main/Resume.pdf" style="color: #61dafb; text-decoration: none;">my resume</a>, 
-                            <a href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs" style="color: #61dafb; text-decoration: none;">resume inspiration</a>, 
                             <a href="https://www.wix.com" style="color: #61dafb; text-decoration: none;">Wix</a>, 
                             <a href="https://www.squarespace.com" style="color: #61dafb; text-decoration: none;">Squarespace</a>'
                     checkoutLinks={[
-                        { url: "https://buy.stripe.com/5kA3dR3Iu6vP13O28q", text: "Branding Starter" },
-                        { url: "https://buy.stripe.com/14k01Fen8bQ93bW00j", text: "Branding Suite" },
-                        { url: "https://buy.stripe.com/9AQdSv5QC9I14g07sM", text: "Business Suite" }
+                        { url: "https://buy.stripe.com/aEUbKn3Iug6pcMweV3", text: "Essential Maintenance" },
+                        { url: "https://buy.stripe.com/eVa5lZcf01bv9Ak5ku", text: "Advanced Concierge" },
+                        { url: "https://buy.stripe.com/cN229NfrcaM5cMwdR1", text: "Event Website" },
+                        { url: "https://buy.stripe.com/fZebKn1Am7zTh2M6oA", text: "Business Suite" },
+                        { url: "https://buy.stripe.com/4gw15Jgvg2fzh2M3cp", text: "Personal Branding" }
                     ]}
-                    photoSrc="/images/service2.png"
+                    photoSrc="/images/service1.png"
                 />
                 <Service
-                    title="Graphics & Editing"
-                    description="Individually crafted assets + image & video editing to scale."
-                    links='<a href="https://www.artbreeder.com/" style="color: #61dafb; text-decoration: none;">Artbreeder</a>, <a href="https://runwayml.com" style="color: #61dafb; text-decoration: none;">Runway ML</a>,
+                    title="AI Profile Pics ➕ Graphic & Image Generation"
+                    description="Custom models and full setting controls vastly outperform the trending apps. Individually crafted assets + image & video editing to scale."
+                    links=' <a href="https://www.shruggingface.com/blog/self-portraits-with-stable-diffusion-and-lora" style="color: #61dafb; text-decoration: none;">how?</a>, 
+                            <a href="https://www.kix.in/2023/04/07/sd-lora-finetuning/" style="color: #61dafb; text-decoration: none;">come again?</a>,
+                            <a href="https://www.profilepicture.ai/" style="color: #61dafb; text-decoration: none;">profilepicture.ai</a>,
+                            <a href="https://www.artbreeder.com/" style="color: #61dafb; text-decoration: none;">Artbreeder</a>, <a href="https://runwayml.com" style="color: #61dafb; text-decoration: none;">Runway ML</a>,
                             <a href="https://skylum.com/luminar-ai" style="color: #61dafb; text-decoration: none;">Luminar AI</a>,
                             <a href="https://www.midjourney.com/home" style="color: #61dafb; text-decoration: none;">Midjourney</a>,
                             <a href="https://openai.com/dall-e-3" style="color: #61dafb; text-decoration: none;">Dall-E</a>'
                     checkoutLinks={[
                         { url: "https://buy.stripe.com/28oeWzgvgcUd27S6oC", text: "Basic Image" },
-                        { url: "https://buy.stripe.com/8wM15J92O07raEo9AP", text: "Advanced Bundle" },
                         { url: "https://buy.stripe.com/6oE15Jen82fzfYIcN2", text: "Premium Bundle" },
+                        { url: "https://buy.stripe.com/8wM15J92O07raEo9AP", text: "Advanced Bundle" },
                         { url: "https://buy.stripe.com/00g15J92O4nHbIsdR7", text: "Custom Profile Pics" }
+                    ]}
+                    photoSrc="/images/service2.png"
+                />
+                <Service
+                    title="Professional Branding"
+                    description="Advance your career with a polished online presence."
+                    links=' <a href="https://github.com/education/codespaces-project-template-js/blob/main/__images__/js-portfolio-site.gif" style="color: #61dafb; text-decoration: none;">portfolio example</a>,
+                            <a href="https://github.com/hpwn/hpwn/blob/main/Resume.pdf" style="color: #61dafb; text-decoration: none;">my resume</a>, 
+                            <a href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs" style="color: #61dafb; text-decoration: none;">resume inspiration</a>'
+                    checkoutLinks={[
+                        { url: "https://buy.stripe.com/5kA3dR3Iu6vP13O28q", text: "Branding Starter" },
+                        { url: "https://buy.stripe.com/14k01Fen8bQ93bW00j", text: "Branding Suite" },
+                        { url: "https://buy.stripe.com/9AQdSv5QC9I14g07sM", text: "Business Suite" }
                     ]}
                     photoSrc="/images/service3.png"
                 />
