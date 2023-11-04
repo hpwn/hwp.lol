@@ -1,3 +1,1 @@
-# Helen Parr fans:
-
-coming soon [incredibles.mom](https://incredibles.mom)
+# Helen Parr fans I got something for ya real soon
