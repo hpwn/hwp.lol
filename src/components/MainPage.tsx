@@ -4,13 +4,14 @@ import Header from './Header';
 import Service from './Service';
 
 const MainPage = () => {
+    const slogan = 'serfdom \u{1F645}\u{1F3FC}\u{200D}\u{2642}\u{FE0F} kingdom \u{1F90C}\u{1F3FB}\u{1F451} here are your keys \u{1F511}';
     return (
-        <div>
-            <Header />
-            {/* Slogan Section */}
-            <section style={sloganStyle}>
-                serfdom 🙅🏻‍♂️ kingdom 🤌🏼👑 here are your keys 🔑
-            </section>
+    <div>
+        <Header />
+        {/* Slogan Section */}
+        <section style={sloganStyle}>
+            {slogan}
+        </section>
             {/* Services Section */}
             <div style={servicesContainerStyle}>
                 <Service
