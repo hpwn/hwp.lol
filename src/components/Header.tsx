@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header style={headerStyle}>
       <img src={logo} alt="Logo" style={logoStyle} />  {/* Use the imported logo */}
-      <p style={titleStyle}>hwp.lol <a href="https://youtu.be/oBCcOI2VMCc" style={{ color: '#ec0d00' }}>▶watch intro</a>
+      <p style={titleStyle}>reacct.co <a href="https://youtu.be/oBCcOI2VMCc" style={{ color: '#ec0d00' }}>▶watch intro</a>
 </p>
     </header>
   );
